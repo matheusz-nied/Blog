@@ -10,7 +10,7 @@ const HomeCoverSection = ({ blogs }) => {
   console.log(blog);
   return (
     <div className="w-full inline-block">
-      <article className="flex flex-col items-start justify-end mx-10 relative h-[85vh]">
+      <article className="flex flex-col items-start justify-end mx-24 relative h-[85vh]">
         <div className="absolute top-0 bottom-0 left-0 right-0 h-full bg-gradient-to-b from-transparent from-50% to-dark/90 rounded-lg z-0"></div>
         <Image
           src={blog.image.filePath.replace("../public", "")}

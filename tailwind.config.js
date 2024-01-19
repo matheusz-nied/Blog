@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         dark: "#1b1b1b",
         light: "#fff",
-        accent: "#02c429",
+        accent: "#00A653",
         accentDark: "#ffdb4d",
         gray: "#747474",
       },

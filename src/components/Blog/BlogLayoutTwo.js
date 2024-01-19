@@ -6,7 +6,7 @@ import { format } from "date-fns";
 
 const BlogLayoutTwo = ({ blog }) => {
   return (
-    <div className="grid grid-cols-12 gap-4 items-center text-dark">
+    <div className="grid grid-cols-12 gap-4 items-center text-dark hover:scale-[102%] transition-all ease duration-500">
       <Link
         href={blog.url}
         className="col-span-4 h-full overflow-hidden rounded-lg"
@@ -29,12 +29,11 @@ const BlogLayoutTwo = ({ blog }) => {
           </h2>
         </Link>
         <div>
-
-        <span className="uppercase text-accent font-semibold text-xs">
-          {blog.tags[0]}
-        </span>
+          <span className="uppercase text-accent font-semibold text-xs">
+            {blog.tags[0]}
+          </span>
         </div>
-        
+
         <span className="capitalize text-gray font-semibold text-base">
           {format(new Date(blog.publishedAt), "dd MMMM, yyyy")}
         </span>
