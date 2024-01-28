@@ -2,3 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
+h1>a>.icon.icon-link:before,
+h2>a>.icon.icon-link:before,
+h3>a>.icon.icon-link:before{
+    content: "#";
+    font-size: 0.8rem;
+}
+
+h2> a, h3> a {
+    text-decoration: none !important;
+}
+
+[data-highlighted-line]{
+    background-color: rgba(255,255,255,0.1) !important;
+    padding: 2px;
+    padding-left: 1px;
+    padding-right: 4px;
+    border-radius: 2px;
+    border-left: 2px solid #00A653;
+}
+
+[data-rehype-pretty-code-fragment]{
+    position: relative;
+}
+[data-rehype-pretty-code-title]{
+    position: absolute;
+    right: 0;
+    background-color: #00A653;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 1rem;
+    border-end-start-radius: 4px;
+}
+
+[data-rehype-pretty-code-caption]{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #747474;
+}
