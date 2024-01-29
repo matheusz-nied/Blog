@@ -15,14 +15,21 @@ export async function generateStaticParams() {
         let slugified = slugger.slug(tag);
         if (!categories.includes(slugified)) {
           categories.push(slugified);
-          paths.push({  slug: slugified  });
+          paths.push({ slug: slugified });
         }
       });
     }
   });
-  return paths
+  return paths;
+}
 
-
+export async function generateMetadata({ params }) {
+  return {
+    title: `${params.slug.replaceAll("-", " ")} Blogs`,
+    description: `Learn more about ${
+      params.slug === "all" ? "web development" : params.slug
+    } through our collection of expert blogs and tutorials`,
+  };
 }
 
 const CategoryPage = ({ params }) => {
