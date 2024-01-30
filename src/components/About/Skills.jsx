@@ -16,11 +16,9 @@ const SkillList = [
 
 const Skills = () => {
   return (
-    <section
-      className="w-full flex flex-col p-5 xs:p-10 sm:p-12 md:p-16 lg:p-20 border-b-2 border-solid border-dark dark:border-light
-       text-dark"
-    >
-      <span className="font-semibold text-lg sm:text-3xl md:text-4xl text-accent">
+    <section className="w-full flex flex-col p-5 xs:p-10 sm:p-12 md:p-16 lg:p-20 border-b-2 border-solid border-dark dark:border-light
+     text-dark dark:text-light">
+      <span className="font-semibold text-lg sm:text-3xl md:text-4xl text-accent dark:text-accent">
         I'm comfortable in...
       </span>
       <ul className="flex flex-wrap mt-8 justify-center  xs:justify-start">

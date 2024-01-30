@@ -10,7 +10,7 @@ module.exports = {
     extend: {
 
       colors: {
-        dark: "#1b1b1b",
+        dark: "#121212",
         light: "#fff",
         accent: "#00A653",
         accentLight:"#01E123",
@@ -20,6 +20,10 @@ module.exports = {
       fontFamily: {
         mr: ["var(--font-mr)"],
         in: ["var(--font-in)"],
+      },
+      screens: {
+        sxl: "1180px",
+        xs: "480px"
       }
     },
   },

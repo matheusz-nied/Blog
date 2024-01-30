@@ -3,7 +3,7 @@ import "./globals.css";
 import { Inter, Manrope } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import siteMetadata from "@/utils/SiteMetaData";
+import siteMetadata from "@/utils/siteMetaData";
 
 const inter = Inter({
   subsets: ["latin"],

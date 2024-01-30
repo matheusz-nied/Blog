@@ -41,7 +41,7 @@ const Footer = () => {
         />
       </form> */}
    
-      <div className="w-full relative font-medium border-t border-solid border-accent py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
+      <div className="w-full relative font-medium  py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
         <span className="text-center">
           &copy;2024 Matheuz.nied. All rights reserved.
         </span>

@@ -1,8 +1,8 @@
 export default function manifest() {
     return {
-      name: 'Next.js App',
-      short_name: 'Next.js App',
-      description: 'Next.js App',
+      name: 'Nied Blog',
+      short_name: 'Nied Blog',
+      description: 'Conteudos sobre tecnologia, software e programaçao',
       start_url: '/',
       display: 'standalone',
     //   background_color: '#fff',
