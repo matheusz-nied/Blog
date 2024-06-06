@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full p-2 sm:p-4 flex items-center justify-between">
+    <header className="w-full p-2 sm:p-2 sm:mb-1 flex items-center justify-between">
       <Logo />
 
       <button
