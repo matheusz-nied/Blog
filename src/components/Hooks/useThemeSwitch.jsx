@@ -19,11 +19,12 @@ export function useThemeSwitch() {
     const userPref = window.localStorage.getItem(storageKey);
     if (userPref) {
       return userPref;
-    }
+    }   
+
     return window.matchMedia(preferDarkQuery).matches ? "dark" : "light";
   };
 
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState(getUserPreference());
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);

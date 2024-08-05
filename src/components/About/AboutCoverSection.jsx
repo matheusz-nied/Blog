@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import astronautaCharacter from "public/astronauta.png"
 import Link from 'next/link'
 
 const AboutCoverSection = () => {

@@ -1,21 +1,19 @@
 // please update required information
 const siteMetadata = {
-    title: 'Next.js Blog With Tailwind CSS and Contentlayer',
-    author: 'CodeBucks',
-    headerTitle: 'Next.js Blog',
-    description: 'A blog created with Next.js, Tailwind.css and contentlayer.',
+    title: 'Nied Blog',
+    author: 'Matheusz Nied',
+    headerTitle: 'Nied Blog',
+    description: 'A blog about technology and computer science.',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://create-blog-with-nextjs.vercel.app', // your website URL
+    siteUrl: 'https://nied-blog.vercel.app/', // your website URL
     siteLogo: '/logo.png',
     socialBanner: '/social-banner.png', // add social banner in the public folder
     email: 'matheusz.nied@proton.me', 
-    github: 'https://github.com/codebucks27',
-    twitter: 'https://twitter.com/code_bucks',
-    facebook: 'https://facebook.com',
-    youtube: 'https://youtube.com/codebucks',
-    linkedin: 'https://www.linkedin.com/in/codebucks/',
-    dribbble: 'https://www.dribbble.com',
+    github: 'https://github.com/matheusz-nied',
+    twitter: 'https://twitter.com/matheusz-nied',
+    youtube: 'https://youtube.com/matheusz-nied',
+    linkedin: 'https://www.linkedin.com/in/matheusz-nied/',
     locale: 'en-US',
   }
   

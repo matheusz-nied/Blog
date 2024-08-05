@@ -6,7 +6,7 @@ import { format } from "date-fns";
 const BlogLayoutRecents = ({post}) => {
   return (
     <div className="group flex flex-col items-center text-dark dark:text-light">
-      <Link href={post.url} className="h-full rounded-xl overflow-hidden">
+      <Link href={post.url} className="h-full rounded-md overflow-hidden">
         <Image
           src={post.image.filePath.replace("../public", "")}
           placeholder="blur"

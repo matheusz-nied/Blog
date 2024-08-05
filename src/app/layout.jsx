@@ -4,6 +4,7 @@ import { Inter, Manrope } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import siteMetadata from "@/utils/siteMetaData";
+import { Audiowide } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,6 +17,12 @@ const manrope = Manrope({
   variable: "--font-mr",
 });
 
+const audiowide = Audiowide({
+  weight: "400", 
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-aw", 
+});
 
 export const metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -58,6 +65,8 @@ export default function RootLayout({ children }) {
         className={cx(
           inter.variable,
           manrope.variable,
+          audiowide.variable, 
+
           "font-mr bg-ligh dark:bg-dark"
         )}
       >

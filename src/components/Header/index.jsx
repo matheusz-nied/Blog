@@ -19,9 +19,88 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full p-2 sm:p-2 sm:mb-1 flex items-center justify-between">
+    <header className="w-full px-2 py-2 mb-6 flex items-center justify-between shadow-md dark:border-b dark:border-green-500			">
       <Logo />
 
+     
+      <div className="flex items-center">
+        {/* Nav celular */}
+        <nav className=" w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-sm font-medium capitalize  items-center flex  sm:hidden
+        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
+        transition-all ease duration-300
+        "
+        style={{
+          top: click ? "1rem" : "-5rem"
+         }}
+        
+        >
+            <Link href="/" className="mr-2">Home</Link>
+            <Link href="/categories/all" className="mx-2">Articles</Link>
+            <Link href="/about" className="mx-2">About</Link>
+            <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={cx(
+              "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1 bg-light"
+            )}
+            aria-label="theme-switcher"
+          >
+            {mode === "light" ? (
+              <Image
+                src={MoonIcon}
+                alt="Theme Logo"
+                className="w-full h-auto fill-dark"
+              />
+            ) : (
+              <Image
+                src={SunIcon}
+                alt="Theme Logo"
+                className="w-full h-auto fill-dark"
+              />
+            )}
+          </button>
+        </nav>
+
+        <nav
+          className="w-max py-3 px-8 mr-6 border-b border-solid dark:border-none font-medium capitalize  items-center
+        hidden sm:flex dark:text-light  backdrop-blur-sm gap-8"
+        >
+          <Link href="/" className="mr-2 hover:underline underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]">
+            Home
+          </Link>
+          <Link href="/categories/all"  className="mr-2 hover:underline underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]">
+          Articles
+          </Link>
+          <Link href="/about" className="mr-2 hover:underline underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]">
+            About
+          </Link>
+
+        </nav>
+         
+        
+      </div>
+      <div className="w-24 flex justify-end pr-4">
+      <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={cx(
+              "w-6 h-6 ease ml-2  hidden sm:flex items-center justify-center rounded-full p-1 bg-light"
+            )}
+            aria-label="theme-switcher"
+          >
+            {mode === "light" ? (
+              <Image
+                src={MoonIcon}
+                alt="Theme Logo"
+                className="w-full h-auto fill-dark"
+              />
+            ) : (
+              <Image
+                src={SunIcon}
+                alt="Theme Logo"
+                className="w-full h-auto fill-dark"
+              />
+            )}
+          </button>
+      </div>
       <button
         className="flex justify-end sm:hidden z-50 w-full mr-3"
         onClick={toggle}
@@ -60,100 +139,6 @@ const Header = () => {
           </div>
         </div>
       </button>
-      <div className="flex items-center">
-        {/* Nav celular */}
-        <nav className=" w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-sm font-medium capitalize  items-center flex  sm:hidden
-        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
-        transition-all ease duration-300
-        "
-        style={{
-          top: click ? "1rem" : "-5rem"
-         }}
-        
-        >
-            <Link href="/" className="mr-2">Home</Link>
-            <Link href="/about" className="mx-2">About</Link>
-            <Link href="/contact" className="mx-2">Contact</Link>
-            <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={cx(
-              "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1 bg-light"
-            )}
-            aria-label="theme-switcher"
-          >
-            {mode === "light" ? (
-              <Image
-                src={MoonIcon}
-                alt="Nied Logo"
-                className="w-full h-auto fill-dark"
-              />
-            ) : (
-              <Image
-                src={SunIcon}
-                alt="Nied Logo"
-                className="w-full h-auto fill-dark"
-              />
-            )}
-          </button>
-        </nav>
-
-        <nav
-          className="w-max py-3 px-8 mr-6 border border-solid font-medium capitalize  items-center
-        hidden sm:flex bg-light/80 backdrop-blur-sm"
-        >
-          <Link href="/" className="mr-2">
-            Home
-          </Link>
-          <Link href="/about" className="mr-2">
-            About
-          </Link>
-          <Link href="/contact" className="mr-2">
-            Contact
-          </Link>
-
-          <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={cx(
-              "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1 bg-light"
-            )}
-            aria-label="theme-switcher"
-          >
-            {mode === "light" ? (
-              <Image
-                src={MoonIcon}
-                alt="Nied Logo"
-                className="w-full h-auto fill-dark"
-              />
-            ) : (
-              <Image
-                src={SunIcon}
-                alt="Nied Logo"
-                className="w-full h-auto fill-dark"
-              />
-            )}
-          </button>
-        </nav>
-        <div className=" hidden sm:flex items-center">
-          <a href="https://matheusznied.vercel.app/" className="inline-block">
-            <DiAtom className="hover:scale-110 transition-all ease duration-300 w-6 h-6 mr-2 dark:fill-light" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/matheusz-nied/"
-            className="inline-block"
-          >
-            <FaLinkedin className="hover:scale-110 transition-all ease duration-300 w-6 h-6 mr-2 dark:fill-light" />
-          </a>
-          <a
-            href="https://www.instagram.com/matheusz.nied/"
-            className="inline-block"
-          >
-            <FaInstagramSquare className="hover:scale-110 transition-all ease duration-300 w-6 h-6 mr-2 dark:fill-light" />
-          </a>
-          <a href="https://github.com/matheusz-nied" className="inline-block">
-            <FaGithubSquare className="hover:scale-110 transition-all ease duration-300 w-6 h-6 mr-2 dark:fill-light" />
-          </a>
-        </div>
-      </div>
     </header>
   );
 };

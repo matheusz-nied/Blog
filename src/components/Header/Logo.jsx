@@ -8,7 +8,7 @@ const Logo = () => {
     <div className='w-24 overflow-hidden  mr-3'>
         <Image src={niedLogo} alt='Nied Logo' className='w-auto h-full'/>
     </div>
-    <span className='font-bold text-2xl md:text-xl'>Nied Blog</span>
+    <span className='font-aw font-normal text-2xl md:text-3xl whitespace-nowrap'>Nied Blog</span>
     </Link>
   )
 }
