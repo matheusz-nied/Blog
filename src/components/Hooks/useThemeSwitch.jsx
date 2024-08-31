@@ -1,9 +1,9 @@
-"use client";
+"use client"; // Isso garante que o código será executado no cliente
 
 import { useEffect, useState } from "react";
 
 export function useThemeSwitch() {
-  const preferDarkQuery = "(prefers-color-schema:dark)";
+  const preferDarkQuery = "(prefers-color-scheme: dark)"; // Corrigi o valor correto da mídia de preferência de cor
   const storageKey = "theme";
 
   const toggleTheme = (theme) => {
@@ -19,7 +19,7 @@ export function useThemeSwitch() {
     const userPref = window.localStorage.getItem(storageKey);
     if (userPref) {
       return userPref;
-    }   
+    }
 
     return window.matchMedia(preferDarkQuery).matches ? "dark" : "light";
   };
@@ -44,10 +44,8 @@ export function useThemeSwitch() {
   }, []);
 
   useEffect(() => {
-    toggleTheme(mode)
-  }, [mode])
-  
+    toggleTheme(mode);
+  }, [mode]);
 
-
-  return [mode, setMode]
+  return [mode, setMode];
 }
