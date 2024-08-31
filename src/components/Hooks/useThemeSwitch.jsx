@@ -15,23 +15,24 @@ export function useThemeSwitch() {
     window.localStorage.setItem(storageKey, theme);
   };
 
-  const getUserPreference = () => {
-    const userPref = window.localStorage.getItem(storageKey);
-    if (userPref) {
-      return userPref;
-    }
 
-    return window.matchMedia(preferDarkQuery).matches ? "dark" : "light";
-  };
-
-  const [mode, setMode] = useState(getUserPreference());
+  const [mode, setMode] = useState('light');
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
     const handleChange = () => {
-      const newMode = getUserPreference();
-      setMode(newMode);
-      toggleTheme(newMode);
+      const userPref = window.localStorage.getItem(storageKey);
+      if (userPref) {
+        const newMode = userPref;
+        setMode(newMode);
+        toggleTheme(newMode);
+      } else {
+        const newMode = window.matchMedia(preferDarkQuery).matches
+          ? "dark"
+          : "light";
+        setMode(newMode);
+        toggleTheme(newMode);
+      }
     };
 
     handleChange();
