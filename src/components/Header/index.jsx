@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full px-2 py-2 mb-6 flex items-center justify-between shadow-md dark:border-b dark:border-green-500			">
+    <header className="w-full px-2 py-2 mb-6 flex items-center justify-between shadow-md dark:border-b dark:border-green-500	relative		">
       <Logo />
 
      
@@ -60,9 +60,11 @@ const Header = () => {
           </button>
         </nav>
 
+
+        {/* Nav Desktop */} 
         <nav
           className="w-max py-3 px-8 mr-6 border-b border-solid dark:border-none font-medium capitalize  items-center
-        hidden sm:flex dark:text-light  backdrop-blur-sm gap-8"
+        hidden sm:flex dark:text-light  backdrop-blur-sm gap-8 absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
         >
           <Link href="/" className="mr-2 hover:underline underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]">
             Home
