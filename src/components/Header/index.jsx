@@ -19,25 +19,30 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full px-2 py-2 mb-6 flex items-center justify-between shadow-md dark:border-b dark:border-green-500	relative		">
+    <header className="w-full px-2 py-2 mb-6 flex items-center justify-between shadow-md dark:border-b dark:border-white	relative		">
       <Logo />
 
-     
       <div className="flex items-center">
         {/* Nav celular */}
-        <nav className=" w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-sm font-medium capitalize  items-center flex  sm:hidden
+        <nav
+          className=" w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-sm capitalize  items-center flex  sm:hidden
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
         transition-all ease duration-300
         "
-        style={{
-          top: click ? "1rem" : "-5rem"
-         }}
-        
+          style={{
+            top: click ? "1rem" : "-5rem",
+          }}
         >
-            <Link href="/" className="mr-2">Home</Link>
-            <Link href="/categories/all" className="mx-2">Articles</Link>
-            <Link href="/about" className="mx-2">About</Link>
-            <button
+          <Link href="/" className="mr-2">
+            Home
+          </Link>
+          <Link href="/categories/all" className="mx-2">
+            Articles
+          </Link>
+          <Link href="/about" className="mx-2">
+            About
+          </Link>
+          <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
             className={cx(
               "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1 bg-light"
@@ -60,48 +65,53 @@ const Header = () => {
           </button>
         </nav>
 
-
-        {/* Nav Desktop */} 
+        {/* Nav Desktop */}
         <nav
-          className="w-max py-3 px-8 mr-6 border-b border-solid dark:border-none font-medium capitalize  items-center
+          className="w-max py-3 px-8 mr-6 border-b border-solid dark:border-none items-center
         hidden sm:flex dark:text-light  backdrop-blur-sm gap-8 absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
         >
-          <Link href="/" className="mr-2 hover:underline underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]">
+          <Link
+            href="/"
+            className="mr-2  underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]"
+          >
             Home
           </Link>
-          <Link href="/categories/all"  className="mr-2 hover:underline underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]">
-          Articles
+          <Link
+            href="/categories/all"
+            className="mr-2  underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]"
+          >
+            Articles
           </Link>
-          <Link href="/about" className="mr-2 hover:underline underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]">
+          <Link
+            href="/about"
+            className="mr-2  underline-offset-4 transition-all ease duration-300 hover:translate-y-[-1px]"
+          >
             About
           </Link>
-
         </nav>
-         
-        
       </div>
       <div className="w-24 flex justify-end pr-4">
-      <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={cx(
-              "w-6 h-6 ease ml-2  hidden sm:flex items-center justify-center rounded-full p-1 bg-light"
-            )}
-            aria-label="theme-switcher"
-          >
-            {mode === "light" ? (
-              <Image
-                src={MoonIcon}
-                alt="Theme Logo"
-                className="w-full h-auto fill-dark"
-              />
-            ) : (
-              <Image
-                src={SunIcon}
-                alt="Theme Logo"
-                className="w-full h-auto fill-dark"
-              />
-            )}
-          </button>
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={cx(
+            "w-6 h-6 ease ml-2  hidden sm:flex items-center justify-center rounded-full p-1 bg-light"
+          )}
+          aria-label="theme-switcher"
+        >
+          {mode === "light" ? (
+            <Image
+              src={MoonIcon}
+              alt="Theme Logo"
+              className="w-full h-auto fill-dark"
+            />
+          ) : (
+            <Image
+              src={SunIcon}
+              alt="Theme Logo"
+              className="w-full h-auto fill-dark"
+            />
+          )}
+        </button>
       </div>
       <button
         className="flex justify-end sm:hidden z-50 w-full mr-3"

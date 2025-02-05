@@ -60,18 +60,18 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="mt-10 bg-dark flex flex-col items-center text-light">
+    <footer className="mt-32 md:mt-64 pt-10 bg-dark flex flex-col items-center text-light">
       <h3 className="mt-10 font-medium dark:font-bold text-center capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
         Interesting Stories | Updates | Guides
       </h3>
       <p className="mt-5 px-4 text-center w-full sm:w-3/5 font-light dark:font-medium text-sm sm:text-base">
-        Subscribe to learn about new technology and updates. Join over 5000+
+        Subscribe to learn about new technology and updates. Join over 2+
         members community to stay up to date with latest news.
       </p>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="mt-6 mb-10 w-fit sm:min-w-[384px] flex items-stretch bg-dark p-1 sm:p-2 rounded mx04"
+        className="mt-6 mb-10 w-fit sm:min-w-[384px] flex items-stretch bg-dark p-1 sm:p-2 rounded mx04 mb-20"
       >
         <input
           type="email"

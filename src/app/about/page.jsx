@@ -12,7 +12,6 @@ export default function About() {
   return (
     <>
       <AboutCoverSection />
-      <Skills />
       
     </>
   );

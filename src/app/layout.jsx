@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
           manrope.variable,
           audiowide.variable, 
 
-          "font-mr bg-ligh dark:bg-dark"
+          "font-in bg-ligh dark:bg-dark"
         )}
       >
 
